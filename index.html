@@ -29,39 +29,22 @@
       scroll-behavior: smooth;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: var(--header-bg);
-      padding: 10px 20px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 20px;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
     .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      background-color: var(--header-bg);
+      color: white;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
     }
 
     h2 {
@@ -81,6 +64,16 @@
       padding-left: 20px;
     }
 
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .actions {
+      text-align: right;
+      padding: 10px 20px 0 0;
+    }
+
     .btn {
       padding: 8px 15px;
       margin-left: 10px;
@@ -96,25 +89,6 @@
       opacity: 0.9;
     }
 
-    .actions {
-      margin-left: auto;
-    }
-
-    .back-to-top {
-      text-align: right;
-      margin-top: 10px;
-    }
-
-    .back-to-top a {
-      font-size: 13px;
-      text-decoration: none;
-      color: #004080;
-    }
-
-    .back-to-top a:hover {
-      text-decoration: underline;
-    }
-
     footer {
       text-align: center;
       background-color: var(--header-bg);
@@ -124,51 +98,40 @@
     }
 
     @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
       .actions {
-        margin: 10px 0 0 0;
-        width: 100%;
-        text-align: left;
+        text-align: center;
+        padding: 10px;
       }
     }
 
     @media print {
-      header, .actions, .back-to-top {
+      .actions {
         display: none;
       }
     }
   </style>
 </head>
-<body id="top">
+<body>
 
   <header>
     <h1>Brijesh Kumar Patel</h1>
-    <div class="nav-links">
-      <a href="#summary">Summary</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#strengths">Strengths</a>
-    </div>
-    <div class="actions">
-      <button class="btn" onclick="window.print()">📄 Download PDF</button>
-      <button class="btn" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
-    </div>
+    <p>Email Marketing & Deliverability Specialist</p>
+    <p>Noida, Uttar Pradesh · +91 8948624147 · brijeshpatelja1@gmail.com</p>
   </header>
+
+  <div class="actions">
+    <button class="btn" onclick="window.print()">📄 Download PDF</button>
+    <button class="btn" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+  </div>
 
   <div class="container">
 
-    <section id="summary">
+    <section>
       <h2>Professional Summary</h2>
       <p>Email Marketing Specialist with <span id="work-duration"></span> experience in deliverability, DNS setup, domain warmup, and campaign optimization. Skilled in tools like SendGrid, Instantly, and ActiveCampaign. Focused on boosting engagement, ensuring inbox placement, and driving business growth through data-driven strategies.</p>
     </section>
 
-    <section id="experience">
+    <section>
       <h2>Work Experience</h2>
       <p><strong>Email Deliverability Specialist</strong><br>
         XGrowth LLC, Noida, Uttar Pradesh · April 2022 – Present (<span id="work-duration-2"></span>)</p>
@@ -180,10 +143,9 @@
         <li>Segmented audiences and improved open/click rates using real-time insights.</li>
         <li>Collaborated with sales and marketing teams to align outreach strategies.</li>
       </ul>
-      <div class="back-to-top"><a href="#top">⬆ Back to Top</a></div>
     </section>
 
-    <section id="projects">
+    <section>
       <h2>Projects</h2>
       <ul>
         <li>Single & Bulk Email Verification System</li>
@@ -191,10 +153,9 @@
         <li>Email Syntax Validator & Duplicate Cleaner</li>
         <li>Real-time Email Validation API</li>
       </ul>
-      <div class="back-to-top"><a href="#top">⬆ Back to Top</a></div>
     </section>
 
-    <section id="skills">
+    <section>
       <h2>Skills</h2>
       <ul>
         <li>Email Setup & Audit</li>
@@ -203,10 +164,9 @@
         <li>DNS Management & Domain Reputation Handling</li>
         <li>Lead Generation & Campaign Strategy</li>
       </ul>
-      <div class="back-to-top"><a href="#top">⬆ Back to Top</a></div>
     </section>
 
-    <section id="education">
+    <section>
       <h2>Education</h2>
       <ul>
         <li><strong>MCA</strong> – National Institute of Technology, Raipur (2016) – 6.73 CPI</li>
@@ -214,17 +174,15 @@
         <li><strong>12th</strong> – U.P. Board (2010) – 71.20%</li>
         <li><strong>10th</strong> – U.P. Board (2008) – 56.10%</li>
       </ul>
-      <div class="back-to-top"><a href="#top">⬆ Back to Top</a></div>
     </section>
 
-    <section id="strengths">
+    <section>
       <h2>Strengths</h2>
       <ul>
         <li>Excellent written and verbal communication</li>
         <li>Team leadership and collaboration skills</li>
         <li>Problem-solving and process documentation</li>
       </ul>
-      <div class="back-to-top"><a href="#top">⬆ Back to Top</a></div>
     </section>
 
   </div>
@@ -234,7 +192,7 @@
   </footer>
 
   <script>
-    const startDate = new Date(2022, 2); // March 2021
+    const startDate = new Date(2021, 2); // March 2021
     const now = new Date();
     const totalMonths = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
     const years = Math.floor(totalMonths / 12);
