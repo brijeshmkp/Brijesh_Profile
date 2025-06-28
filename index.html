@@ -98,6 +98,13 @@
         padding: 10px 20px;
       }
     }
+
+    /* ✅ Hide buttons when printing */
+    @media print {
+      .actions {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -108,7 +115,7 @@
     <p>Noida, Uttar Pradesh · +91 8948624147 · brijeshpatelja1@gmail.com</p>
   </header>
 
-  <!-- ✅ Top-right buttons -->
+  <!-- ✅ Buttons at top right -->
   <div class="actions">
     <button class="btn" onclick="window.print()">📄 Download PDF</button>
     <button class="btn" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
@@ -182,7 +189,7 @@
   </footer>
 
   <script>
-    // Calculate experience dynamically
+    // Auto-calculate experience
     const startDate = new Date(2021, 2); // March 2021
     const now = new Date();
     const totalMonths = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
