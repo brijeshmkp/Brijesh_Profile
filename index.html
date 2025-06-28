@@ -5,20 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brijesh Kumar Patel - Resume</title>
   <style>
-  /* ...existing styles... */
-  .actions {
-    text-align: right;
-    margin: 20px 40px 0 0;
-  }
-
-  @media (max-width: 600px) {
-    .actions {
-      text-align: center;
-      margin-right: 0;
+    :root {
+      --bg-color: #f7f9fc;
+      --text-color: #333;
+      --header-bg: #004080;
+      --section-bg: white;
     }
-  }
-
-
 
     body.dark-mode {
       --bg-color: #1e1e1e;
@@ -81,13 +73,13 @@
     }
 
     .actions {
-      text-align: center;
-      margin: 20px;
+      text-align: right;
+      padding: 10px 40px 0 0;
     }
 
     .btn {
       padding: 10px 20px;
-      margin: 5px;
+      margin-left: 10px;
       border: none;
       border-radius: 4px;
       background-color: #004080;
@@ -99,19 +91,29 @@
     .btn:hover {
       opacity: 0.9;
     }
+
+    @media (max-width: 600px) {
+      .actions {
+        text-align: center;
+        padding: 10px 20px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Brijesh Kumar Patel</h1>
     <p>Email Marketing & Deliverability Specialist</p>
     <p>Noida, Uttar Pradesh · +91 8948624147 · brijeshpatelja1@gmail.com</p>
-<!-- ✅ Buttons positioned at top-right -->
+  </header>
+
+  <!-- ✅ Top-right buttons -->
   <div class="actions">
     <button class="btn" onclick="window.print()">📄 Download PDF</button>
     <button class="btn" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
   </div>
-  </header>
+
   <div class="container">
 
     <section>
@@ -181,7 +183,7 @@
 
   <script>
     // Calculate experience dynamically
-    const startDate = new Date(2022, 2); // March 2021
+    const startDate = new Date(2021, 2); // March 2021
     const now = new Date();
     const totalMonths = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
     const years = Math.floor(totalMonths / 12);
