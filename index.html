@@ -67,7 +67,11 @@
 
     <section>
       <h2>Professional Summary</h2>
-      <p>I am an experienced email marketing professional with over <strong>3.3 years</strong> of expertise in managing and optimizing email campaigns across various industries. My skills encompass <strong>lead generation, campaign management, DNS configuration, and domain warmup</strong>, making me confident in my ability to deliver impactful results for Xgrowth LLC.</p>
+      <p>
+        I am an experienced email marketing professional with over 
+        <span id="exp-years">3.3</span> years of expertise in managing and optimizing email campaigns across various industries.
+        My skills encompass <strong>lead generation, campaign management, DNS configuration, and domain warmup</strong>, making me confident in my ability to deliver impactful results for Xgrowth LLC.
+      </p>
       <p>Throughout my career, I have successfully designed and executed strategies that have consistently exceeded performance targets. I am particularly proud of my ability to enhance <strong>engagement and conversion rates</strong>, ensuring that every campaign I manage drives tangible value.</p>
       <p>I thrive in dynamic environments where I can apply my technical knowledge and creative problem-solving skills to meet business objectives. Joining Xgrowth LLC represents an exciting opportunity to leverage my expertise and contribute to your team's success.</p>
     </section>
@@ -75,7 +79,7 @@
     <section>
       <h2>Work Experience</h2>
       <p><strong>Email Deliverability Specialist</strong><br>
-      XGrowth LLC, Noida, Uttar Pradesh · April 2022 – Present</p>
+      XGrowth LLC, Noida, Uttar Pradesh · April 2022 – Present (<span id="work-duration"></span>)</p>
       <ul>
         <li>Monitored and optimized email delivery across high-volume campaigns.</li>
         <li>Implemented SPF, DKIM, DMARC, and DNS authentication protocols.</li>
@@ -131,6 +135,21 @@
   <footer>
     &copy; 2025 Brijesh Kumar Patel · All rights reserved.
   </footer>
+
+  <script>
+    // START DATE OF YOUR EXPERIENCE (YYYY, MM - 1)
+    const startDate = new Date(2021, 2); // March 2021
+    const now = new Date();
+
+    const totalMonths = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    const experienceText = months > 0 ? `${years}.${months} years` : `${years} years`;
+
+    // Update values in DOM
+    document.getElementById("exp-years").textContent = experienceText;
+    document.getElementById("work-duration").textContent = experienceText;
+  </script>
 
 </body>
 </html>
