@@ -5,12 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brijesh Kumar Patel - Resume</title>
   <style>
+    :root {
+      --bg-color: #f7f9fc;
+      --text-color: #333;
+      --header-bg: #004080;
+      --section-bg: white;
+    }
+
+    body.dark-mode {
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --header-bg: #111;
+      --section-bg: #2c2c2c;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f9fc;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       margin: 0;
       padding: 0;
-      color: #333;
+      transition: all 0.3s ease;
     }
 
     .container {
@@ -22,7 +37,7 @@
     header, footer {
       text-align: center;
       padding: 20px;
-      background-color: #004080;
+      background-color: var(--header-bg);
       color: white;
     }
 
@@ -31,14 +46,17 @@
     }
 
     h2 {
-      color: #004080;
+      color: var(--header-bg);
       margin-bottom: 10px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #ccc;
       padding-bottom: 5px;
     }
 
     section {
       margin-bottom: 30px;
+      background-color: var(--section-bg);
+      padding: 20px;
+      border-radius: 6px;
     }
 
     p, li {
@@ -53,30 +71,52 @@
     footer {
       font-size: 14px;
     }
+
+    .actions {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      background-color: #004080;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Brijesh Kumar Patel</h1>
-    <p>Email Deliverability Specialist | Technical Management</p>
+    <p>Email Marketing & Deliverability Specialist</p>
     <p>Noida, Uttar Pradesh · +91 8948624147 · brijeshpatelja1@gmail.com</p>
   </header>
+
+  <div class="actions">
+    <button class="btn" onclick="window.print()">📄 Download PDF</button>
+    <button class="btn" onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+  </div>
 
   <div class="container">
 
     <section>
       <h2>Professional Summary</h2>
-      <p>
-        <section>
-  <h2>Professional Summary</h2>
-  <p>Email Marketing Specialist with 3+ years’ experience in deliverability, DNS setup, domain warmup, and campaign optimization. Skilled in tools like SendGrid, Instantly, and ActiveCampaign. Focused on boosting engagement, ensuring inbox placement, and driving business growth through data-driven strategies.</p>
-</section>
+      <p>Email Marketing Specialist with <span id="work-duration"></span> experience in deliverability, DNS setup, domain warmup, and campaign optimization. Skilled in tools like SendGrid, Instantly, and ActiveCampaign. Focused on boosting engagement, ensuring inbox placement, and driving business growth through data-driven strategies.</p> 
+    </section>
 
     <section>
       <h2>Work Experience</h2>
       <p><strong>Email Deliverability Specialist</strong><br>
-      XGrowth LLC, Noida, Uttar Pradesh · April 2022 – Present (<span id="work-duration"></span>)</p>
+      XGrowth LLC, Noida, Uttar Pradesh · April 2022 – Present (<span id="work-duration-2"></span>)</p>
       <ul>
         <li>Monitored and optimized email delivery across high-volume campaigns.</li>
         <li>Implemented SPF, DKIM, DMARC, and DNS authentication protocols.</li>
@@ -134,18 +174,20 @@
   </footer>
 
   <script>
-    // START DATE OF YOUR EXPERIENCE (YYYY, MM - 1)
+    // Calculate experience dynamically
     const startDate = new Date(2021, 2); // March 2021
     const now = new Date();
-
     const totalMonths = (now.getFullYear() - startDate.getFullYear()) * 12 + (now.getMonth() - startDate.getMonth());
     const years = Math.floor(totalMonths / 12);
     const months = totalMonths % 12;
     const experienceText = months > 0 ? `${years}.${months} years` : `${years} years`;
-
-    // Update values in DOM
-    document.getElementById("exp-years").textContent = experienceText;
     document.getElementById("work-duration").textContent = experienceText;
+    document.getElementById("work-duration-2").textContent = experienceText;
+
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
   </script>
 
 </body>
