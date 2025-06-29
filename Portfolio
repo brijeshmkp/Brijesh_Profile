@@ -3,130 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brijesh Kumar Patel - Portfolio</title>
+  <title>Brijesh Kumar Patel - Resume</title>
   <style>
-    :root {
-      --bg: #f9fafb;
-      --text: #111;
-      --accent: #004080;
-      --dark-bg: #111;
-      --dark-text: #f0f0f0;
+    * {
+      box-sizing: border-box;
     }
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      scroll-behavior: smooth;
-      transition: background 0.3s, color 0.3s;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      background: #f4f6f8;
     }
-    body.dark {
-      background: var(--dark-bg);
-      color: var(--dark-text);
+    .resume {
+      display: flex;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    header {
-      background: var(--accent);
+    .sidebar {
+      width: 35%;
+      background: #1e3a5f;
       color: white;
-      padding: 20px;
+      padding: 30px 20px;
+    }
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+    .sidebar h2 {
       text-align: center;
-    }
-    nav {
-      text-align: center;
-      margin-top: 10px;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: var(--accent);
       margin-bottom: 10px;
+      font-size: 18px;
     }
-    ul {
-      padding-left: 20px;
-    }
-    .btn {
-      padding: 10px 20px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .btn:hover {
-      opacity: 0.9;
-    }
-    footer {
+    .sidebar p {
       text-align: center;
-      padding: 20px;
-      background: var(--accent);
-      color: white;
+      margin-bottom: 30px;
+      font-size: 14px;
     }
+    .section-title {
+      font-size: 16px;
+      margin-top: 30px;
+      border-bottom: 1px solid #999;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+    .sidebar ul {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+    .main {
+      width: 65%;
+      padding: 30px 40px;
+    }
+    .main h1 {
+      font-size: 26px;
+      margin: 0;
+    }
+    .main h3 {
+      margin-top: 0;
+      color: #888;
+    }
+    .main section {
+      margin-bottom: 30px;
+    }
+    .main ul {
+      padding-left: 20px;
+      font-size: 15px;
+    }
+    .ref { font-size: 14px; }
+    .ref p { margin: 4px 0; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Brijesh Kumar Patel</h1>
-    <p>Email Marketing & Deliverability Specialist</p>
-    <button class="btn" onclick="window.print()">📄 Download Resume</button>
-    <button class="btn" onclick="toggleDark()">🌓 Dark Mode</button>
-  </header>
+  <div class="resume">
+    <div class="sidebar">
+      <img src="https://via.placeholder.com/120" alt="Profile Photo" />
+      <h2>Brijesh Kumar Patel</h2>
+      <p>Email Marketing Specialist</p>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
+      <div class="section-title">Contact</div>
+      <ul>
+        <li>+91 8948624147</li>
+        <li>brijeshpatelja1@gmail.com</li>
+        <li>Noida, Uttar Pradesh</li>
+      </ul>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am an experienced email marketing professional with over 3.3+ years of expertise in managing and optimizing email campaigns across various industries. Skilled in DNS setup, domain warmup, and deliverability tools like SendGrid, Instantly, and Mailshake. Passionate about crafting email systems that scale and convert.</p>
-  </section>
+      <div class="section-title">Education</div>
+      <ul>
+        <li>MCA – NIT Raipur (2016)</li>
+        <li>BCA – Meerut Univ. (2013)</li>
+        <li>12th – U.P. Board (2010)</li>
+        <li>10th – U.P. Board (2008)</li>
+      </ul>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>Single & Bulk Email Verification System</li>
-      <li>Blacklist Monitoring Dashboard</li>
-      <li>Email Syntax Validator & Duplicate Cleaner</li>
-      <li>Real-time Email Validation API</li>
-    </ul>
-  </section>
+      <div class="section-title">Skills</div>
+      <ul>
+        <li>Email Setup & Audit</li>
+        <li>Deliverability Management</li>
+        <li>Campaign Tools (Mailshake, Klenty)</li>
+        <li>DNS & Domain Handling</li>
+        <li>Lead Generation</li>
+      </ul>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Email Setup, Deliverability Audit</li>
-      <li>SPF, DKIM, DMARC configuration</li>
-      <li>Campaign tools: Mailshake, Klenty, Smartlead</li>
-      <li>DNS & Domain Reputation Management</li>
-      <li>Lead Generation & Outreach Strategy</li>
-    </ul>
-  </section>
+      <div class="section-title">Languages</div>
+      <ul>
+        <li>English (Fluent)</li>
+        <li>Hindi (Fluent)</li>
+      </ul>
+    </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:brijeshpatelja1@gmail.com">brijeshpatelja1@gmail.com</a></p>
-    <p>Location: Noida, Uttar Pradesh</p>
-    <p>Phone: +91 8948624147</p>
-  </section>
+    <div class="main">
+      <h1>Brijesh Kumar Patel</h1>
+      <h3>Email Marketing & Deliverability Specialist</h3>
 
-  <footer>
-    &copy; 2025 Brijesh Kumar Patel · All rights reserved.
-  </footer>
+      <section>
+        <div class="section-title">Profile</div>
+        <p>Experienced email marketing professional with 3.3+ years optimizing campaigns, improving inboxing, and managing deliverability across industries. Skilled in DNS setup, domain warmup, and tools like SendGrid and Instantly. Proven results in lead generation and engagement.</p>
+      </section>
 
-  <script>
-    function toggleDark() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
+      <section>
+        <div class="section-title">Work Experience</div>
+        <p><strong>XGrowth LLC</strong> – Email Deliverability Specialist (Apr 2022 – Present)</p>
+        <ul>
+          <li>Managed and optimized high-volume email campaigns.</li>
+          <li>Implemented SPF, DKIM, DMARC protocols.</li>
+          <li>Reduced bounce rate and blacklist issues significantly.</li>
+          <li>Collaborated with marketing teams for outreach success.</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="section-title">Projects</div>
+        <ul>
+          <li>Single & Bulk Email Verification System</li>
+          <li>Email Syntax Validator & Duplicate Cleaner</li>
+          <li>Blacklist Monitoring Dashboard</li>
+          <li>Real-time Validation API</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="section-title">References</div>
+        <div class="ref">
+          <p><strong>Estelle Darcy</strong><br>CTO – Wardiere Inc.<br>Phone: 123-456-7890<br>Email: hello@reallygreatsite.com</p>
+          <p><strong>Harper Richard</strong><br>CEO – Wardiere Inc.<br>Phone: 123-456-7890<br>Email: hello@reallygreatsite.com</p>
+        </div>
+      </section>
+    </div>
+  </div>
 </body>
 </html>
